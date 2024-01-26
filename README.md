@@ -19,14 +19,17 @@ This project allows you to explore various technologies and aspects of full-stac
         - `dueDate` (Due date for the task)
         - `labels` (Array of labels/tags associated with the task)
         - `checklist` (Array of checklist items for the task)
-
+   - Comments structure:
+     - `content` (Comment text)
+     - `userId` (User ID of the poster)
+     - `timestamp` (Timestamp when the comment was posted)
 2. **Users:**
     - Attributes:
         - `userId` (Unique identifier for each user)
         - `username` (User's username)
         - `email` (User's email address)
         - `roles` (Array of roles assigned to the user)
-
+        - `image` (URL link to image)
 
 3. **SharedTasks:**
     - Attributes:
@@ -34,11 +37,11 @@ This project allows you to explore various technologies and aspects of full-stac
         - `taskId` (Foreign key referencing the task associated with shared task)
         - `sharedWithUsers` (Array of user IDs with whom the task is shared)
 
-4. **Checklists:**
+4. **ChecklistItem:**
     - Attributes:
-        - `checklistId` (Unique identifier for each checklist)
-        - `items` (Array of checklist items)
-        - `taskId` (Foreign key referencing the task associated with the checklist)
+        - `checklistItemId` (Unique identifier for each checklist item)
+        - `description` (Description of the task)
+        - `completed` (Boolean marking a task complete/incomplete)
 
 5. **Messages:**
     - Attributes:
